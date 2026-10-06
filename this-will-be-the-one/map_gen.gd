@@ -65,7 +65,7 @@ func _notification(what: int) -> void:
 		
 func _ready() -> void:
 	var texture_length = $sprites/hidden/hidden.texture.get_width() #320
-	var ratio = 16./texture_length
+	var ratio =  16./texture_length
 	mine_thread = Thread.new()
 	x_length = $sprites/hidden/hidden.texture.get_width() * ratio
 	y_length = $sprites/hidden/hidden.texture.get_height() * ratio

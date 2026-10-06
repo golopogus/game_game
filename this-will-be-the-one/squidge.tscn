@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cllstwhtkjnmp"]
+
+[ext_resource type="Script" uid="uid://ckc8qjhcaa6qi" path="res://squidge.gd" id="1_t8n0a"]
+[ext_resource type="Texture2D" uid="uid://7kd1nilyq5mn" path="res://pics/squidge.png" id="2_74tfo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iar8r"]
+size = Vector2(56, 40)
+
+[node name="squidge" type="Area2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_t8n0a")
+
+[node name="squidge" type="Sprite2D" parent="."]
+texture = ExtResource("2_74tfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_iar8r")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
